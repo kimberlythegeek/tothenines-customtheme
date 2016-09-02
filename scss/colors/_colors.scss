@@ -1,0 +1,33 @@
+/**
+ * 5.0 - Colors
+ */
+@import 'variables/color-scheme';
+
+html {
+  background: $color__lightest;
+}
+ .site-title a {
+   color: $color__darkest;
+ }
+ .site-title a:hover, .site-title a:focus {
+   color: $color__dark;
+ }
+ #menu-main a {
+   color: $color__darkest;
+ }
+ #menu-main a:hover, #menu-main a:focus {
+    color: $color__mid;
+ }
+ #menu-main li {
+   border-bottom: 3px double $color__dark;
+   background-image: url('img/stripes-lt.png');
+ }
+ .menu-item:last-child {
+   border-bottom: none;
+ }
+ .menu-item:nth-child(odd){
+   background: desaturate($color__lighter, 15%);
+ }
+ .menu-item:nth-child(even){
+   background: $color__lightest;
+ }

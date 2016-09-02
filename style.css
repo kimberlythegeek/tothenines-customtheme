@@ -1,0 +1,414 @@
+/*
+Theme Name:
+Theme URI:
+Author: Kimberly Pennington
+Author URI: http://acodeabove.com
+Description:
+Version:
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags:
+Text Domain:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/**
+ * Table of Contents
+ *
+ * 1.0 - Reset
+ * 2.0 - Normalize
+ * 3.0 - Typography
+ * 4.0 - Layout
+ *    4.1 - Header
+ *    4.2 - Posts and pages
+ *    4.3 - Post Formats
+ *    4.4 - Comments
+ *    4.5 - Sidebar
+ *    4.6 - Widgets
+ *    4.7 - Footer
+ * 5.0 - Colors
+ * 6.0 - Media Queries
+ */
+/**
+ * 1.0 - Reset
+ */
+/* line 4, scss/_reset.scss */
+a:hover, a:focus {
+  text-decoration: none;
+  cursor: pointer; }
+
+/* line 8, scss/_reset.scss */
+ul {
+  list-style: none; }
+
+/**
+ * 2.0 - Normalize
+ *
+ * Normalizing styles have been helped along thanks to the fine work of
+ * Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+ */
+/* line 8, scss/_normalize.scss */
+html {
+  font-family: sans-serif;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%; }
+
+/* line 14, scss/_normalize.scss */
+body {
+  margin: 0; }
+
+/* line 18, scss/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block; }
+
+/* line 33, scss/_normalize.scss */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  vertical-align: baseline; }
+
+/* line 41, scss/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/* line 46, scss/_normalize.scss */
+[hidden],
+template {
+  display: none; }
+
+/* line 51, scss/_normalize.scss */
+a {
+  background-color: transparent; }
+
+/* line 55, scss/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/* line 59, scss/_normalize.scss */
+b,
+strong {
+  font-weight: 700; }
+
+/* line 64, scss/_normalize.scss */
+small {
+  font-size: 80%; }
+
+/* line 68, scss/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 76, scss/_normalize.scss */
+sup {
+  top: -0.5em; }
+
+/* line 80, scss/_normalize.scss */
+sub {
+  bottom: -0.25em; }
+
+/* line 84, scss/_normalize.scss */
+img {
+  border: 0; }
+
+/* line 88, scss/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* line 92, scss/_normalize.scss */
+figure {
+  margin: 0; }
+
+/* line 96, scss/_normalize.scss */
+hr {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box; }
+
+/* line 102, scss/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-size: 1em; }
+
+/* line 109, scss/_normalize.scss */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0; }
+
+/* line 119, scss/_normalize.scss */
+select {
+  text-transform: none; }
+
+/* line 123, scss/_normalize.scss */
+button {
+  overflow: visible; }
+
+/* line 127, scss/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  max-width: 100%; }
+
+/* line 134, scss/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer; }
+
+/* line 142, scss/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+  opacity: .5; }
+
+/* line 148, scss/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/* line 154, scss/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-right: 0.4375em;
+  padding: 0; }
+
+/* line 163, scss/_normalize.scss */
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-outer-spin-button,
+input[type="time"]::-webkit-inner-spin-button,
+input[type="time"]::-webkit-outer-spin-button,
+input[type="datetime-local"]::-webkit-inner-spin-button,
+input[type="datetime-local"]::-webkit-outer-spin-button,
+input[type="week"]::-webkit-inner-spin-button,
+input[type="week"]::-webkit-outer-spin-button,
+input[type="month"]::-webkit-inner-spin-button,
+input[type="month"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/* line 178, scss/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield; }
+
+/* line 182, scss/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/* line 187, scss/_normalize.scss */
+fieldset {
+  border: 1px solid #d1d1d1;
+  margin: 0 0 1.75em;
+  min-width: inherit;
+  padding: 0.875em; }
+
+/* line 194, scss/_normalize.scss */
+fieldset > :last-child {
+  margin-bottom: 0; }
+
+/* line 198, scss/_normalize.scss */
+legend {
+  border: 0;
+  padding: 0; }
+
+/* line 203, scss/_normalize.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top; }
+
+/* line 208, scss/_normalize.scss */
+optgroup {
+  font-weight: bold; }
+
+/**
+ * 3.0 - Typography
+ */
+/* line 5, scss/typography/_typography.scss */
+.site-title {
+  font-family: 'Shrikhand', cursive;
+  font-size: 18rem;
+  text-align: center; }
+
+/* line 10, scss/typography/_typography.scss */
+#menu-main {
+  font-family: 'Lobster', cursive;
+  font-size: 2.6rem; }
+
+/**
+ * 3.0 - Typography
+ */
+/**
+ * 4.1 - Header
+ */
+/* line 5, scss/layout/_header.scss */
+.header-image {
+  height: 800px;
+  width: 100%; }
+
+/* line 11, scss/layout/_header.scss */
+#menu-main {
+  padding: 0;
+  margin: auto; }
+
+/* line 15, scss/layout/_header.scss */
+#menu-main li {
+  text-align: center;
+  display: block;
+  width: 100%; }
+
+/**
+ * 4.2 - Post and Pages
+ */
+/**
+ * 4.3 - Post Formats
+ */
+/**
+ * 4.4 - Comments
+ */
+/**
+ * 4.5 - Sidebar
+ */
+/**
+ * 4.6 - Widgets
+ */
+/**
+ * 4.7 - Footer
+ */
+/**
+ * 5.0 - Colors
+ */
+/* line 6, scss/colors/_colors.scss */
+html {
+  background: #FFF2DA; }
+
+/* line 9, scss/colors/_colors.scss */
+.site-title a {
+  color: #1F1509; }
+
+/* line 12, scss/colors/_colors.scss */
+.site-title a:hover, .site-title a:focus {
+  color: #6a4518; }
+
+/* line 15, scss/colors/_colors.scss */
+#menu-main a {
+  color: #1F1509; }
+
+/* line 18, scss/colors/_colors.scss */
+#menu-main a:hover, #menu-main a:focus {
+  color: #8e6428; }
+
+/* line 21, scss/colors/_colors.scss */
+#menu-main li {
+  border-bottom: 3px double #6a4518;
+  background-image: url("img/stripes-lt.png"); }
+
+/* line 25, scss/colors/_colors.scss */
+.menu-item:last-child {
+  border-bottom: none; }
+
+/* line 28, scss/colors/_colors.scss */
+.menu-item:nth-child(odd) {
+  background: #fbf0c9; }
+
+/* line 31, scss/colors/_colors.scss */
+.menu-item:nth-child(even) {
+  background: #FFF2DA; }
+
+/**
+ * 6.0 - Media Queries
+ */
+@media (min-width: 200px) {
+  /* line 2, scss/media-queries/_200.scss */
+  .header-image {
+    height: 400px; }
+
+  /* line 6, scss/media-queries/_200.scss */
+  .site-title {
+    font-size: 10rem;
+    margin: auto;
+    padding-top: 8rem; } }
+@media (min-width: 580px) {
+  /* line 2, scss/media-queries/_580.scss */
+  .header-image {
+    height: 600px; }
+
+  /* line 5, scss/media-queries/_580.scss */
+  .site-title {
+    padding-top: 16rem;
+    font-size: 12rem; } }
+@media (min-width: 640px) {
+  /* line 2, scss/media-queries/_640.scss */
+  #menu-main {
+    background: #FFF2DA;
+    background-image: url(img/stripes-lt.png);
+    padding-top: 1rem;
+    text-align: right;
+    height: 7rem;
+    border-bottom: 3px solid #1F1509; }
+
+  /* line 10, scss/media-queries/_640.scss */
+  #menu-main li {
+    display: inline;
+    background: none;
+    border: none;
+    padding-left: 3rem;
+    padding-right: 1rem;
+    font-size: 3rem; } }
+@media (min-width: 768px) {
+  /* line 2, scss/media-queries/_768.scss */
+  #menu-main {
+    padding-top: 2.2rem;
+    height: 11rem; }
+
+  /* line 6, scss/media-queries/_768.scss */
+  #menu-main li {
+    padding-left: 5rem;
+    padding-right: 2rem;
+    font-size: 4rem; }
+
+  /* line 12, scss/media-queries/_768.scss */
+  .header-image {
+    height: 800px; }
+
+  /* line 15, scss/media-queries/_768.scss */
+  .site-title {
+    font-size: 18rem;
+    padding-top: 22rem; } }
+@media (min-width: 1165px) {
+  /* line 2, scss/media-queries/_1165.scss */
+  .site-title {
+    padding-top: 29rem; } }
+
+/*# sourceMappingURL=style.css.map */

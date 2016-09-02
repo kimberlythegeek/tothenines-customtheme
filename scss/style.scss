@@ -1,0 +1,41 @@
+/*
+Theme Name:
+Theme URI:
+Author: Kimberly Pennington
+Author URI: http://acodeabove.com
+Description:
+Version:
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags:
+Text Domain:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+
+/**
+ * Table of Contents
+ *
+ * 1.0 - Reset
+ * 2.0 - Normalize
+ * 3.0 - Typography
+ * 4.0 - Layout
+ *    4.1 - Header
+ *    4.2 - Posts and pages
+ *    4.3 - Post Formats
+ *    4.4 - Comments
+ *    4.5 - Sidebar
+ *    4.6 - Widgets
+ *    4.7 - Footer
+ * 5.0 - Colors
+ * 6.0 - Media Queries
+ */
+
+@import 'reset';
+@import 'normalize';
+@import 'typography/typography';
+@import 'layout/layout';
+@import 'colors/colors';
+@import 'media-queries/media-queries';
